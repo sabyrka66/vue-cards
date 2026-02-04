@@ -22,7 +22,7 @@
     },
     {
       "id": "3",
-      "question": "Что такое Computed свойства?",
+      "question": "Что такое computed свойства?",
       "answer": "Это производные данные, которые кешируются на основе их зависимостей.",
       "description": "Computed свойства пересчитываются только тогда, когда изменяется одна из их реактивных зависимостей. Это делает их гораздо эффективнее методов для сложных вычислений.",
       "resources": ["https://vuejs.org/guide/essentials/computed.html"],
@@ -42,11 +42,41 @@
     },
     {
       "id": "5",
-      "question": "Для чего используется атрибут 'key' в списках v-for?",
-      "answer": "Для идентификации узлов при обновлении Virtual DOM.",
-      "description": "Ключ помогает алгоритму сравнения (diffing algorithm) Vue понять, какой элемент списка изменился, переместился или был удален, что значительно повышает производительность рендеринга.",
+      "question": "Для чего используется атрибут key в v-for?",
+      "answer": "Для идентификации элементов списка при обновлении Virtual DOM.",
+      "description": "Ключ помогает Vue корректно отслеживать изменения элементов списка, что предотвращает ошибки состояния и повышает производительность.",
       "resources": ["https://vuejs.org/guide/essentials/list.html#maintaining-state-with-key"],
       "level": 2,
+      "completed": false,
+      "editDate": "05.02.2026, 12:00"
+    },
+    {
+      "id": "6",
+      "question": "Что такое Composition API?",
+      "answer": "Это API для организации логики компонентов на основе функций.",
+      "description": "Composition API позволяет группировать связанную логику (state, методы, вычисления) вместе, улучшая читаемость и переиспользуемость кода по сравнению с Options API.",
+      "resources": ["https://vuejs.org/guide/extras/composition-api-faq.html"],
+      "level": 2,
+      "completed": false,
+      "editDate": "05.02.2026, 12:00"
+    },
+    {
+      "id": "7",
+      "question": "Чем watch отличается от computed?",
+      "answer": "watch используется для выполнения побочных эффектов при изменении данных, а computed — для вычисления новых значений.",
+      "description": "Computed должен быть чистой функцией без сайд-эффектов. Watch применяется, когда нужно реагировать на изменение данных: запросы, логирование, таймеры.",
+      "resources": ["https://vuejs.org/guide/essentials/watchers.html"],
+      "level": 2,
+      "completed": false,
+      "editDate": "05.02.2026, 12:00"
+    },
+    {
+      "id": "8",
+      "question": "Что такое teleport в Vue?",
+      "answer": "Teleport позволяет рендерить часть шаблона вне DOM-иерархии компонента.",
+      "description": "Чаще всего используется для модальных окон, тултипов и дропдаунов, которые должны находиться на верхнем уровне DOM, но логически принадлежать компоненту.",
+      "resources": ["https://vuejs.org/guide/built-ins/teleport.html"],
+      "level": 3,
       "completed": false,
       "editDate": "05.02.2026, 12:00"
     }
