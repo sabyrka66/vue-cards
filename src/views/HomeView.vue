@@ -1,5 +1,7 @@
 <script setup lang="ts">
 import AppLoader from '@/components/AppLoader.vue'
+import QuestionCardList from '@/components/QuestionCardList.vue'
+import SearchField from '@/components/SearchField.vue'
 import { useFetch } from '@/composables/useFetch'
 import { API_URL } from '@/constants'
 import type { QuestionApiItem } from '@/types'
@@ -36,3 +38,16 @@ onMounted(() => {
     <QuestionCardList :items="questionCards" />
   </div>
 </template>
+
+<style scoped>
+.controlsContainer {
+  width: 100%;
+  max-width: 800px;
+  margin-inline: auto;
+  padding-block: 15px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+}
+</style>
