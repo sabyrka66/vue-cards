@@ -11,7 +11,7 @@ const questionCards = ref<QuestionApiItem[]>([])
 const searchValue = ref<string>('')
 
 const { fetchResponse, isLoading, error } = useFetch(async (): Promise<void> => {
-  const response = await fetch(`${API_URL}/react`)
+  const response = await fetch(`${API_URL}/vue`)
 
   if (!response.ok) {
     throw new Error('Failed to fetch questions')
@@ -22,7 +22,7 @@ const { fetchResponse, isLoading, error } = useFetch(async (): Promise<void> => 
 })
 
 onMounted(() => {
-  void fetchResponse('react')
+  void fetchResponse('vue')
 })
 </script>
 

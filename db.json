@@ -1,0 +1,54 @@
+{
+  "vue": [
+    {
+      "id": "1",
+      "question": "Что такое Vue.js?",
+      "answer": "Vue.js — это прогрессивный JavaScript-фреймворк для создания пользовательских интерфейсов.",
+      "description": "Vue спроектирован так, чтобы его можно было внедрять постепенно. В отличие от фреймворков-монолитов, Vue сфокусирован только на слое представления (view layer), что делает его простым в интеграции с другими библиотеками.",
+      "resources": ["https://vuejs.org/guide/introduction.html"],
+      "level": 1,
+      "completed": false,
+      "editDate": "05.02.2026, 12:00"
+    },
+    {
+      "id": "2",
+      "question": "В чем разница между ref и reactive в Vue 3?",
+      "answer": "ref используется для любых типов данных (включая примитивы), а reactive — только для объектов.",
+      "description": "ref создает объект-обертку с единственным свойством .value. Reactive делает сам объект реактивным (через Proxy). В шаблонах ref разворачивается автоматически, но в JS коде требует обращения через .value.",
+      "resources": ["https://vuejs.org/guide/essentials/reactivity-fundamentals.html"],
+      "level": 2,
+      "completed": false,
+      "editDate": "05.02.2026, 12:00"
+    },
+    {
+      "id": "3",
+      "question": "Что такое Computed свойства?",
+      "answer": "Это производные данные, которые кешируются на основе их зависимостей.",
+      "description": "Computed свойства пересчитываются только тогда, когда изменяется одна из их реактивных зависимостей. Это делает их гораздо эффективнее методов для сложных вычислений.",
+      "resources": ["https://vuejs.org/guide/essentials/computed.html"],
+      "level": 1,
+      "completed": false,
+      "editDate": "05.02.2026, 12:00"
+    },
+    {
+      "id": "4",
+      "question": "Как работает директива v-model?",
+      "answer": "Это синтаксический сахар для двустороннего связывания данных.",
+      "description": "Под капотом v-model комбинирует передачу пропса (modelValue) и прослушивание события (update:modelValue).",
+      "resources": ["https://vuejs.org/guide/components/v-model.html"],
+      "level": 1,
+      "completed": false,
+      "editDate": "05.02.2026, 12:00"
+    },
+    {
+      "id": "5",
+      "question": "Для чего используется атрибут 'key' в списках v-for?",
+      "answer": "Для идентификации узлов при обновлении Virtual DOM.",
+      "description": "Ключ помогает алгоритму сравнения (diffing algorithm) Vue понять, какой элемент списка изменился, переместился или был удален, что значительно повышает производительность рендеринга.",
+      "resources": ["https://vuejs.org/guide/essentials/list.html#maintaining-state-with-key"],
+      "level": 2,
+      "completed": false,
+      "editDate": "05.02.2026, 12:00"
+    }
+  ]
+}
