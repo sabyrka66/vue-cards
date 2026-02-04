@@ -20,8 +20,8 @@ const router = createRouter({
       component: () => import('@/views/QuestionView.vue'),
     },
     {
-      path: '*',
-      name: 'not found page',
+      path: '/:pathMatch(.*)*',
+      name: 'not-found',
       component: () => import('@/views/NotFoundView.vue'),
     },
   ],
