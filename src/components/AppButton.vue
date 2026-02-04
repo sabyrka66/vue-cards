@@ -1,0 +1,64 @@
+<script setup lang="ts">
+interface Props {
+  isActive?: boolean
+  isDisabled?: boolean
+}
+
+withDefaults(defineProps<Props>(), {
+  isActive: false,
+  isDisabled: false,
+})
+
+const emit = defineEmits<{
+  (e: 'click'): void
+}>()
+</script>
+
+<template>
+  <button
+    class="button"
+    :class="{ active: isActive }"
+    :disabled="isDisabled"
+    @click="emit('click')"
+  >
+    <slot></slot>
+  </button>
+</template>
+
+<style scoped>
+.button {
+  border-radius: 8px;
+  border: 1px solid transparent;
+  padding: 0.6em 1.2em;
+  font-size: 1em;
+  font-weight: 500;
+  font-family: inherit;
+  color: var(--color-text-button);
+  background-color: var(--color-bg-button);
+  transition-duration: 0.2s;
+
+  &:hover {
+    border-color: #2f2f2f;
+  }
+
+  &:active {
+    color: #000;
+    background-color: #ce7e1d;
+  }
+
+  &:focus,
+  &:focus-visible {
+    outline: 4px auto #2f2f2f;
+  }
+
+  &:disabled {
+    opacity: 0.5;
+    pointer-events: none;
+  }
+}
+
+.active {
+  color: #000;
+  background-color: #ce7e1d;
+}
+</style>
