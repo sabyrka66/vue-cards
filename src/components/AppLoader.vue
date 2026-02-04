@@ -1,0 +1,44 @@
+<template>
+  <div className="backdrop">
+    <div className="loader"></div>
+  </div>
+</template>
+
+<style scoped>
+.backdrop {
+  position: fixed;
+  inset: 0;
+  background-color: rgba(0 0 0 / 0.4);
+  z-index: 999;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.loader {
+  height: 80px;
+  aspect-ratio: 1;
+  padding: 10px;
+  border-radius: 50%;
+  box-sizing: border-box;
+  position: relative;
+  mask:
+    conic-gradient(#000 0 0) content-box exclude,
+    conic-gradient(#000 0 0);
+  filter: blur(12px);
+
+  &::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: conic-gradient(#0000 35%, #0a7ea4, #0000 65%);
+    animation: l1 1.5s linear infinite;
+  }
+}
+
+@keyframes l1 {
+  to {
+    rotate: 1turn;
+  }
+}
+</style>
