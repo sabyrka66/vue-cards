@@ -21,3 +21,5 @@ const onInput = (event: Event) => {
     <input type="text" placeholder="Search..." :value="modelValue" @input="onInput" class="input" />
   </label>
 </template>
+
+

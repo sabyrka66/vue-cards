@@ -25,3 +25,16 @@ const cards = computed(() => props.items.map((item) => adaptCard(item)))
     <QuestionCard v-for="card in cards" :key="card.id" :card="card" />
   </div>
 </template>
+
+<style scoped>
+.card-list {
+  width: 100%;
+  padding-block: 30px;
+  margin-inline: auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+</style>
